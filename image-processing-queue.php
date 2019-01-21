@@ -2,8 +2,7 @@
 /*
 Plugin Name: Image Processing Queue
 Plugin URI: http://wordpress.org/extend/plugins/image-processing-queue/
-Description: Allow theme designers to define image sizes for specific images and have them
-processed in the background
+Description: Allow theme designers to define image sizes for specific images and have them processed in the background.
 Author: Delicious Brains
 Version: 1.1.0
 Author URI: http://deliciousbrains.com/
