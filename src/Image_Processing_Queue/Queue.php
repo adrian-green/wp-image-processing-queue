@@ -157,7 +157,7 @@ class Queue {
 	public function get_image( $post_id, $sizes, $attr = '' ) {
 		$this->process_image( $post_id, $sizes );
 
-		$size = self::get_size_name( $size );
+		$size = self::get_size_name( $sizes[0] );
 
 		return wp_get_attachment_image( $post_id, $size, false, $attr );
 	}
