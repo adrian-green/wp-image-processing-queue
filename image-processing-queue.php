@@ -8,6 +8,7 @@ Version: 1.1.0
 Author URI: http://deliciousbrains.com/
 Text Domain: image-processing-queue
 Domain Path: /languages/
+GitHub Plugin URI: https://github.com/solidsite/wp-image-processing-queue
 
 // Copyright (c) 2016 Delicious Brains. All rights reserved.
 //
