@@ -99,7 +99,7 @@ class Queue {
 	 * @param int   $post_id
 	 * @param array $sizes
 	 */
-	protected function process_image( $post_id, $sizes ) {
+	public function process_image( $post_id, $sizes ) {
 		if ( self::is_attachment_locked( $post_id ) ) {
 			return;
 		}
