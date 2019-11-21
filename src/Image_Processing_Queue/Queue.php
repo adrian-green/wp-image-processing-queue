@@ -104,6 +104,12 @@ class Queue {
 			return;
 		}
 
+		// Convert single $size into an array of $sizes, in the event that only a
+		// single-depth $sizes array is passed.
+		if ( isset( $sizes[0] ) && is_array( $sizes[0] ) === false ) {
+			$sizes = [$sizes];
+		}
+
 		$lock_attachment = false;
 
 		foreach ( $sizes as $size ) {
