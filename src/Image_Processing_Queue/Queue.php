@@ -99,9 +99,15 @@ class Queue {
 	 * @param int   $post_id
 	 * @param array $sizes
 	 */
-	protected function process_image( $post_id, $sizes ) {
+	public function process_image( $post_id, $sizes ) {
 		if ( self::is_attachment_locked( $post_id ) ) {
 			return;
+		}
+
+		// Convert single $size into an array of $sizes, in the event that only a
+		// single-depth $sizes array is passed.
+		if ( isset( $sizes[0] ) && is_array( $sizes[0] ) === false ) {
+			$sizes = [$sizes];
 		}
 
 		$lock_attachment = false;
@@ -157,7 +163,9 @@ class Queue {
 	public function get_image( $post_id, $sizes, $attr = '' ) {
 		$this->process_image( $post_id, $sizes );
 
-		return wp_get_attachment_image( $post_id, array( $sizes[0][0], $sizes[0][1] ), false, $attr );
+		$size = self::get_size_name( $sizes[0] );
+
+		return wp_get_attachment_image( $post_id, $size, false, $attr );
 	}
 
 	/**

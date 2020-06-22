@@ -41,3 +41,13 @@ function ipq_get_theme_image( $post_id, $sizes, $attr = '' ) {
 function ipq_get_theme_image_url( $post_id, $size ) {
 	return Image_Processing_Queue\Queue::instance()->get_image_url( $post_id, $size );
 }
+
+/**
+ * Check if the image sizes exist and push them to the queue if not.
+ *
+ * @param int   $post_id
+ * @param array $sizes
+ */
+function ipq_process_image( $post_id, $sizes ) {
+	return Image_Processing_Queue\Queue::instance()->process_image( $post_id, $sizes );
+}
