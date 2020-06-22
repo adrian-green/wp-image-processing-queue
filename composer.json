@@ -1,5 +1,5 @@
 {
-    "name": "deliciousbrains/wp-image-processing-queue",
+    "name": "adrian-green/wp-image-processing-queue",
     "description": "Resize WordPress images in the background",
     "keywords": ["wordpress", "images", "resize", "crop", "queue"],
     "license": "GPL-2.0-only",
